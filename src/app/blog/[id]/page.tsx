@@ -2,19 +2,13 @@ import  posts from "../../../../public/posts.json";
 
 import React from 'react'
 
-const Post = ({ params }: { params: { id: string } }) => {
+const Blog = ({ params }: { params: { id: number } }) => {
+  const { title, date, content, type } = posts[params.id]
   return (
     <div>
-      <div>Post</div>
-      <ul>
-        {posts.map(({ type, title, content, date }, index) => (
-          <li key={index}>
-            {title} - {date} - {content} - {type}
-          </li>
-        ))}
-      </ul>
+      <p>{title} - {date} - {content} - {type}</p>
     </div>
   )
 }
 
-export default Post
+export default Blog
