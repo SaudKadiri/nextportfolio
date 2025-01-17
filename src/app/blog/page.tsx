@@ -9,9 +9,9 @@ const Blogs = () => {
       <ul>
         {posts.map(({ type, title, content, date }, index) => (
           <li key={index}>
-            {title} - {date} - {content} - {type}
+            {index + 1}. {title} - 
             <Link href={`/blog/${index}`} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
-                View Project
+                View Blog
             </Link>
           </li>
 
