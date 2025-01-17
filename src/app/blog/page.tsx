@@ -1,11 +1,12 @@
 import React from 'react'
 import  posts from "../../../public/posts.json";
 import Link from 'next/link';
+import Page from '../components/Page';
 
 const Blogs = () => {
 
   return (
-    <div>
+    <Page>
       <ul>
         {posts.map(({ type, title, content, date }, index) => (
           <li key={index}>
@@ -17,7 +18,7 @@ const Blogs = () => {
 
         ))}
       </ul>
-    </div>
+    </Page>
   )
 }
 
