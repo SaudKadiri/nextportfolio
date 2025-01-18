@@ -1,13 +1,17 @@
 import React, { ReactNode } from 'react'
-import NavBar from './NavBar'
+import Dock from './Dock'
 
 const Page = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
-    <main className='h-screen border 1px border-violet-800 bg-[linear-gradient(to_right_top,#0f1014,#111114,#121214,#131314,#141414)] px-10'>
-        <div className='fixed bottom-0 left-1/2 -translate-x-1/2 border border-blue-500 h-full'>
+    <main className="p-2 inset-0 relative bg-[#fff] dark:bg-[#0F1014] text-black/90 dark:text-white/90 min-h-screen">
+      {/* Fixed dock */}
+      <div className="fixed bottom-0 flex flex-col items-center w-full p-4">
+          <Dock />
+      </div>
+      {/* Rest of the screen */}
+      <div className={`p-6`}>
           {children}
-          <NavBar />
-        </div>
+      </div>
     </main>
   )
 }
