@@ -1,8 +1,11 @@
+import Page from '@/app/components/Page'
 import React from 'react'
 
 const Project = () => {
   return (
-    <div>Project</div>
+    <Page>
+      <div>Project</div>
+    </Page>
   )
 }
 
