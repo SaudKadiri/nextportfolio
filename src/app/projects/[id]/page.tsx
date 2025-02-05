@@ -4,7 +4,7 @@ import React from 'react'
 const Project = () => {
   return (
     <Page>
-      <div>Project</div>
+      <div>This is a Project</div>
     </Page>
   )
 }
